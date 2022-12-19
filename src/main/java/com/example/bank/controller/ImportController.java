@@ -36,7 +36,7 @@ public class ImportController {
         Long senderID = transactionDto.getSenderID();
         Long recipientID = transactionDto.getRecipientID();
         BigDecimal transferAmount= transactionDto.getTransferAmount();
-        transactionService.importTransaction(senderID,recipientID,transferAmount) ;
+        transactionService.transferAmount(senderID,recipientID,transferAmount) ;
     }
     @PostMapping("/addMoney")
     public void addMoney(@RequestBody AddMoneyDto addMoneyDto) throws Exception {

@@ -22,7 +22,7 @@ public class TransactionServiceImpl implements TransactionService {
     @Autowired private TransactionRepository transactionRepository;
 
     @Override
-    public void importTransaction(Long senderID,Long recipientID,BigDecimal transferAmount) {
+    public void transferAmount(Long senderID, Long recipientID, BigDecimal transferAmount) {
         checkIds(senderID,recipientID);
 
         Account senderAccount = getAccountById(senderID);
