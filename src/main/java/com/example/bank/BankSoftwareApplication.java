@@ -11,5 +11,5 @@ public class BankSoftwareApplication {
         SpringApplication.run(BankSoftwareApplication.class, args);
     }
 
-    //http://localhost:8080/swagger-ui/index.html
+    //http://localhost:8001/swagger-ui/index.html
 }

@@ -13,10 +13,11 @@ import java.util.List;
 @Transactional
 @Service
 public class AccountsServiceImpl implements AccountService {
-    @Autowired private AccountRepository accountRepository;
+    @Autowired
+    private AccountRepository accountRepository;
 
     @Override
-    public Account importAccount(String firstName,String lastName,String iban) {
+    public Account importAccount(String firstName, String lastName, String iban) {
         Account account = new Account();
         account.setFirstName(firstName);
         account.setLastName(lastName);

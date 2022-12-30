@@ -3,6 +3,7 @@ package com.example.bank.controller;
 import com.example.bank.models.dto.AccountDto;
 import com.example.bank.models.dto.AddMoneyDto;
 import com.example.bank.models.dto.TransactionDto;
+import com.example.bank.models.dto.WithdrawMoneyDto;
 import com.example.bank.models.entities.Account;
 import com.example.bank.service.AccountService;
 import com.example.bank.service.TransactionService;
@@ -44,6 +45,11 @@ public class ImportController {
         BigDecimal amount = addMoneyDto.getAmount();
         transactionService.addMoneyToAccount(accountID,amount);
     }
-
+    @PostMapping("/withdrawMoney")
+    public void withdrawMoney(@RequestBody WithdrawMoneyDto withdrawMoneyDto) {
+        Long accountID = withdrawMoneyDto.getAccountID();
+        BigDecimal amount = withdrawMoneyDto.getAmount();
+        transactionService.withdrawMoney(accountID,amount);
+    }
 
 }
